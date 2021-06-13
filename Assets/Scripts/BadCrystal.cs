@@ -1,10 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrystalScript : MonoBehaviour
+public class BadCrystal : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         gameObject.SetActive(true);
@@ -21,7 +21,6 @@ public class CrystalScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            CrystalController.instance.SlayCrystal();
             gameObject.SetActive(false);
         }
     }
